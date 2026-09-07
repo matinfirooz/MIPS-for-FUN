@@ -6,19 +6,11 @@ MIPSforFUN is designed as a readable computer-architecture project: the RTL is s
 
 ## Architecture
 
-```text
-                     +---------------- MIPSforFUN ----------------+
-                     |                                             |
- PC -> IMEM -> IF/ID -> Decode/RF -> ID/EX -> Forward -> ALU       |
- ^                                        |        |      |         |
- |                                        |        |      +-> branch/jump redirect
- |                                        |        v                |
- |                                     MEM/WB <- EX/MEM -> DMEM     |
- |                                        |                         |
- +---------------- flush/stall -----------+-----> Register File     |
-                     |                                             |
-                     +---------------------------------------------+
-```
+<p align="center">
+  <img src="mipsforfun.png" alt="MIPSforFUN 5-stage pipelined architecture" width="100%">
+</p>
+
+MIPSforFUN follows the classic **five-stage MIPS pipeline**: instruction fetch, decode/register read, execute, memory access, and writeback. The datapath includes forwarding, load-use stalling, and branch/jump redirection with pipeline flushing.
 
 ### Five pipeline stages
 
@@ -52,6 +44,7 @@ The instruction encodings are standard MIPS encodings. MIPSforFUN uses **no bran
 
 ```text
 MIPSforFUN/
+├── mipsforfun.jpg
 ├── rtl/
 │   ├── mipsforfun_pkg.sv
 │   ├── alu.sv
