@@ -44,7 +44,7 @@ The instruction encodings are standard MIPS encodings. MIPSforFUN uses **no bran
 
 ```text
 MIPSforFUN/
-├── mipsforfun.jpg
+├── mipsforfun.png
 ├── rtl/
 │   ├── mipsforfun_pkg.sv
 │   ├── alu.sv
