@@ -1,0 +1,9 @@
+rtl/mipsforfun_pkg.sv
+rtl/alu.sv
+rtl/regfile.sv
+rtl/control.sv
+rtl/hazard_unit.sv
+rtl/forward_unit.sv
+rtl/cpu.sv
+rtl/memory.sv
+rtl/soc.sv
